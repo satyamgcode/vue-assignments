@@ -1,17 +1,17 @@
 <script setup>
 
 // import { onMounted } from 'vue';
-import test from './components/test.vue'
 import { ref, reactive, computed } from 'vue'
+
 const msg = ref("write here")
 const date = ref(new Date())
-
+// using computed properties
 const computed_date = computed(() => {
   return date
 })
 
 const clearInput = (value) => {
-  msg.value = "";
+  msg.value = " ";
   date.value = new Date()
 
 }
@@ -19,6 +19,7 @@ const capitalize = () => {
   msg.value = msg.value.toUpperCase()
 }
 
+import test from './components/test.vue'
 </script>
 
 <template>
@@ -26,7 +27,6 @@ const capitalize = () => {
     <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
 
   </div>
-  <test msg="This is assignment-4" />
   <h2>Hello:{{ msg }} </h2>
   <!-- date using ref and change when clear-->
   <h2>updation time: {{ date }}</h2><br>
@@ -38,6 +38,7 @@ const capitalize = () => {
   <button @click="clearInput"> Clear</button>
   <!-- <button @dblclick="updatetime">updatetime</button> -->
   <button @click="capitalize"> Capitalize</button>
+  <test msg="This is assignment-4" />
 
 </template>
 
