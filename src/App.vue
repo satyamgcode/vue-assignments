@@ -2,12 +2,18 @@
 
 // import { onMounted } from 'vue';
 import test from './components/test.vue'
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 const msg = ref("write here")
 const date = ref(new Date())
+
+const computed_date = computed(() => {
+  return date
+})
+
 const clearInput = (value) => {
   msg.value = "";
   date.value = new Date()
+
 }
 const capitalize = () => {
   msg.value = msg.value.toUpperCase()
@@ -22,7 +28,12 @@ const capitalize = () => {
   </div>
   <test msg="This is assignment-4" />
   <h2>Hello:{{ msg }} </h2>
-  <h2>updation time: {{ date }}</h2>
+  <!-- date using ref and change when clear-->
+  <h2>updation time: {{ date }}</h2><br>
+
+  <!-- display date using computed property also change when clear input -->
+  <h3> Computed time: {{ computed_date }}</h3>
+
   <input type="text" v-model="msg">
   <button @click="clearInput"> Clear</button>
   <!-- <button @dblclick="updatetime">updatetime</button> -->
