@@ -12,14 +12,18 @@ const computed_date = computed(() => {
 
 const clearInput = (value) => {
   msg.value = " ";
+  // to update the time while giving new input
   date.value = new Date()
 
 }
 const capitalize = () => {
   msg.value = msg.value.toUpperCase()
 }
-
+// const getStyleObject = () => {
+//   return { color: red.value && blue.value ? 'purple' : red.value ? 'red' : blue.value ? 'blue' : "" };
+// }
 import test from './components/test.vue'
+
 </script>
 
 <template>
