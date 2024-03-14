@@ -6,11 +6,14 @@ defineProps({
 const red = ref(false)
 const blue = ref(false)
 
+// to create a dropdown to change the color
+const color = ref('')
+//over
+
+
 const getStyleObject = () => {
   return { color: red.value && blue.value ? 'purple' : red.value ? 'red' : blue.value ? 'blue' : "" };
 }
-// to create a dropdown to change the color
-
 
 
 </script>
@@ -25,14 +28,17 @@ const getStyleObject = () => {
       <input type="checkbox" id="blue" name="blue" v-model="blue">
       <label for="blue"> Blue</label>
     </div>
+
     <!-- to chnage color by using a dropdowm menu  -->
+
     <div class="dropdown">
-      <h2>Im colorchanger</h2>
-      <select name="change_colors" id="color" value="select_color">
-        <option value="red"> select a color</option>
-        <option value="red"> orange</option>
-        <option value="red"> yellow</option>
-        <option value="red"> green</option>
+      <h2 :style="{ color }">Im colorchanger</h2>
+      <select name="change_colors" id="color" value="select_color" v-model="color">
+        <option value="select" disabled> select a color</option>
+        <option value="red"> red</option>
+        <option value="orange"> orange</option>
+        <option value="yellow"> yellow</option>
+        <option value="green"> green</option>
       </select>
     </div>
   </div>

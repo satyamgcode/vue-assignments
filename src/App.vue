@@ -19,9 +19,7 @@ const clearInput = (value) => {
 const capitalize = () => {
   msg.value = msg.value.toUpperCase()
 }
-// const getStyleObject = () => {
-//   return { color: red.value && blue.value ? 'purple' : red.value ? 'red' : blue.value ? 'blue' : "" };
-// }
+// comoponent
 import test from './components/test.vue'
 
 </script>
@@ -42,7 +40,9 @@ import test from './components/test.vue'
   <button @click="clearInput"> Clear</button>
   <!-- <button @dblclick="updatetime">updatetime</button> -->
   <button @click="capitalize"> Capitalize</button>
-  <test msg="This is assignment-4" />
+
+  <!-- component -->
+  <test msg="This is assignment-6" />
 
 </template>
 
