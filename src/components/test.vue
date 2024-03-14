@@ -20,8 +20,8 @@ const getStyleObject = () => {
 <template>
   <div class="container">
     <!-- to change color by using checkbox -->
-    <div>
-      <h1 :style="getStyleObject()">{{ msg }}</h1>
+    <div class="checkcolor">
+      <h2 :style="getStyleObject()">{{ msg }}</h2>
       <input type="checkbox" id="red" name="red" v-model="red">
       <label for="red"> Red</label>
       <br>
@@ -41,6 +41,8 @@ const getStyleObject = () => {
         <option value="green"> green</option>
       </select>
     </div>
+
+
   </div>
 </template>
 <style scoped>
@@ -48,8 +50,12 @@ const getStyleObject = () => {
   display: flex;
 }
 
+.checkcolor {
+  margin: 1.5rem;
+}
+
 .dropdown {
-  margin: 2.5rem;
+  margin: 1.5rem;
   margin-left: 10.5rem;
 }
 </style>

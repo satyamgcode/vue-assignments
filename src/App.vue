@@ -21,6 +21,7 @@ const capitalize = () => {
 }
 // comoponent
 import test from './components/test.vue'
+import test1 from './components/test1.vue'
 
 </script>
 
@@ -42,8 +43,13 @@ import test from './components/test.vue'
   <button @click="capitalize"> Capitalize</button>
 
   <!-- component -->
-  <test msg="This is assignment-6" />
+  <div style="display: flex;">
+    <test msg="This is assignment-8" />
 
+    <!-- sigle input form takes input which will reflect in list after clicking sublit button -->
+    <test1 />
+
+  </div>
 </template>
 
 <style scoped>
